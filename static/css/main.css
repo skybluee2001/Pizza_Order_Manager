@@ -1,0 +1,99 @@
+body, html {
+    margin: 0;
+    text-align: center;
+    font-family: sans-serif;
+}
+body {
+  color: white;
+  text-align: center;
+}
+h1 {
+  color: red;
+  position: absolute;
+  left: 700px;
+  top: -5px;
+  width: 40%;
+}
+
+h4{
+  color: red;
+  position: absolute;
+  left: 700px;
+  top: 80px;
+  width: 40%;
+}
+
+h5{
+  color: red;
+  text-align: center;
+  background-image: url("static/css/pizznew.jpg");
+  font-size: 50px
+
+}
+
+.content {
+    margin: 0 auto;
+    text-align: center;
+    width: 400px;
+}
+
+table, td, th {
+    border: 1px solid #aaa;
+    text-align: center;
+    background-color:black
+
+}
+
+table {
+    border-collapse: collapse;
+    position: absolute;
+    left: 700px;
+    top: 280px;
+    width: 40%;
+    color: white
+
+}
+
+th {
+    height: 70px;
+}
+
+td {
+    text-align: center;
+    padding: 5px;
+
+}
+
+.form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#content {
+    width: 25%;
+    position: absolute;
+    left: 750px;
+    top: 150px;
+    height:5%;
+}
+
+#number{
+    width: 25%;
+    position: absolute;
+    left: 750px;
+    top: 200px;
+    height:5%;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.button {
+ color:yellow;
+ position: absolute;
+ left: 700px;
+ top: 300px;
+ width: 40%;
+}
