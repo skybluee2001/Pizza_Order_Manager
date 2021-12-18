@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title style="color:yellow;">Pizza House</title>
+<style>
+input[type=submit]{
+background-color: red;
+color: white ;
+text-align: center;
+position: absolute;
+left: 1085px;
+top: 170px;
+height:7%;
+width: 100px;
+}
+</style>
+{% endblock %}
+
+{% block body %}
+<div class = "content">
+    <h1 style="text-align: center; color:gold;font-family: Cursive; font-size:50px;"> Pizza House </h1>
+    <style>
+        body{
+            background-image: url("static/css/pizznew.jpg"), url("static/css/wood2.jpg");
+            background-repeat: no-repeat, no-repeat;
+            background-size: 50vw 100vh, 100%;
+}
+      </style>
+
+    {% if tasks| length<1 %}
+    <h4 style="color:gold;font-family:Cursive;font-size: 17px;"> Welcome to Pizza House! Order delicious pizzas by adding them to the list below!</h4>
+    {% else %}
+    <h4 style="color:gold;font-family:Cursive;font-size: 17px;"> Order delicious pizzas by adding them to the list below!</h4>
+
+    <table >
+
+        <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Added On</th>
+            <th>Changes</th>
+        </tr>
+        {% for task in tasks %}
+            <tr>
+                <td>{{ task.content }}</td>
+                <td>{{ task.quant}}</td>
+                <td>{{ task.date_created.date()}}</td>
+
+                <td>
+                    <a href="/delete/{{task.id}}"><button style="background-color:red; color: white;" type="button" class="btn btn-default">Delete</button></a>
+                    <br>
+                    <br>
+                    <a href="/update/{{task.id}}"><button style='background-color:green; color: white;' type="button" class="btn btn-default">Update</button></a>
+                </td>
+            </tr>
+        {% endfor %}
+
+    </table>
+
+    {% endif %}
+    <form action ="/" method="POST">
+        <input type="text" name="content" required id="content" placeholder="Add Item" style="color: black;">
+        <input type="number" name="quant" required id="number" placeholder="Add Quantity" style="color: black;">
+        <input type="submit" value= "Submit" style= 'background-color:red;' class="btn btn-default" ></input>
+
+    </form>
+
+</div>
+
+{% endblock %}

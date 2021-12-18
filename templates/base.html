@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename= 'css/main.css')}}">
+    {% block head %} {% endblock %}
+
+</head>
+
+<body>
+
+{% block body %}
+<!--<style>-->
+<!--        body{-->
+<!--            background-image: url("static/css/pizznew.jpg"), url("static/css/wood2.jpg");-->
+<!--            background-repeat: no-repeat, no-repeat;-->
+<!--            background-size: 50vw 100vh, 100%;-->
+<!--}-->
+<!--      </style>-->
+{% endblock %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

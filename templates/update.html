@@ -1,0 +1,54 @@
+{<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+body{
+background-color: black;
+}
+input[type=submit]{
+background-color: green;
+color: white;
+padding: 16px 32px;
+margin: 4px 2px;
+position: absolute;
+left: 550px;
+top: 250px;
+width: 10%;
+}
+</style>
+<body>
+
+<div class = "content">
+<!--    <style>-->
+<!--        body{-->
+<!--            background-image: url("static/css/pizznew.jpg"), url("static/css/wood2.jpg");-->
+<!--            background-repeat: no-repeat, no-repeat;-->
+<!--            background-size: 50vw 100vh, 100%;-->
+<!--}-->
+<!--      </style>-->
+    <h5 style="color: red; font-size: 50px; position: absolute; left: 500px; top: 10px; "> Update Item </h5>
+    <div class="form">
+
+        <form action ="/update/{{task.id}}" method="POST">
+
+            <input type="text" name="content" id="content" value="{{task.content}}" style="position: absolute; left: 500px; top: 185px; width: 20%; height: 5%; ">
+            <input type="submit" value= "Update" class="btn btn-default"></input>
+
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
